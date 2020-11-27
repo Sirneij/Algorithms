@@ -23,7 +23,7 @@ void print_prime_numbers(int n)
     {
         if (is_prime(i))
         {
-            cout << i << "|"
+            cout << i << "    |"
                  << "\t";
         }
     }
