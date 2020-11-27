@@ -5,6 +5,31 @@
 #include <cmath>
 
 using namespace std;
+//Without using sieve of Eratosthenes Time complexity O(n*sqrt(n))
+
+bool is_prime(int n)
+{
+    for (size_t i = 2; i <= sqrt(n); i++)
+    {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
+}
+
+void print_prime_numbers(int n)
+{
+    for (size_t i = 2; i < n; i++)
+    {
+        if (is_prime(i))
+        {
+            cout << i << "|"
+                 << "\t";
+        }
+    }
+}
+
+//Using sieve of Eratosthenes
 
 void print_prime(int n)
 {
@@ -17,10 +42,11 @@ void print_prime(int n)
         }
     }
 
-    for (int i = 1; i < n; i++)
+    for (int i = 2; i < n; i++)
     {
         if (arr[i - 1] == 0)
-            cout << i << "\t";
+            cout << i << "    |"
+                 << "\t";
     }
 }
 
@@ -28,5 +54,8 @@ int main()
 {
     int n = 100;
     print_prime(n);
+    cout << "\n"
+         << "=======================================================================================================================" << endl;
+    print_prime_numbers(n);
     return 0;
 }
