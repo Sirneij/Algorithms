@@ -1,4 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
 using namespace std;
 
 int binarySearch(int array[], int number)
