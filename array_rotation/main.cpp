@@ -9,20 +9,20 @@ using namespace std;
 void rotate_array(int arr[], int n, int d){
     int temp[d];
     arr[n] = {0};
-    for(size_t i=0; i < d; i++){
+    for(size_t i=0; i < d; i++){//Copies the array at index i=0 to d into temp array
         temp[i] = arr[i];
         cout << temp[i] << "\t";
     }
     cout << endl;
-    for(size_t i=0; i <n-d ; i++){
+    for(size_t i=0; i <n-d ; i++){ //Shift the remaining array elements forward
         arr[i] = arr[i+d];
         cout << arr[i] << "\t";
     }
     cout << endl;
-    for(size_t i=n-d,j=0; i < n, j<d; i++, j++){
+    for(size_t i=n-d,j=0; i < n, j<d; i++, j++){ //appending temp array to arr
         arr[i] = temp[j];
     }
-    for(size_t i = 0; i < n; i++){
+    for(size_t i = 0; i < n; i++){//prints the array element
         cout << arr[i] << "\t";
     }
     cout << endl;
