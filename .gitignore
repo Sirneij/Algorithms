@@ -2,3 +2,5 @@
 */*.exe
 */main.o
 */main
+*/game
+*/game.o
